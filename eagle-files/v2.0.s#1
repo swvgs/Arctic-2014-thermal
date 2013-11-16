@@ -5297,7 +5297,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <instance part="JP4" gate="G$1" x="-25.4" y="73.66"/>
 <instance part="JP9" gate="G$1" x="-27.94" y="91.44"/>
 <instance part="JP11" gate="G$1" x="-22.86" y="38.1"/>
-<instance part="JP12" gate="G$1" x="15.24" y="45.72"/>
+<instance part="JP12" gate="G$1" x="-25.4" y="17.78"/>
 <instance part="JP13" gate="G$1" x="-35.56" y="53.34"/>
 <instance part="JP14" gate="G$1" x="-27.94" y="0"/>
 <instance part="MLX90614" gate="G$1" x="91.44" y="17.78" rot="R90"/>

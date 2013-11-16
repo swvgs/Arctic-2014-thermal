@@ -129,6 +129,8 @@
 <text x="8.9662" y="48.2854" size="0.8128" layer="21">.1uF</text>
 <text x="13.462" y="39.116" size="0.8128" layer="21" rot="R270">openlog</text>
 <text x="10.9982" y="48.8442" size="1.778" layer="22" rot="MR90">ThermaLocoLogger</text>
+<text x="13.97" y="69.85" size="0.8128" layer="22" rot="MR90">v1.4</text>
+<text x="3.81" y="74.93" size="0.8128" layer="22" rot="MR180">12-16-11</text>
 <text x="1.27" y="77.47" size="0.254" layer="22" rot="MR90">djb</text>
 <polygon width="0.254" layer="22">
 <vertex x="8.4328" y="39.9034"/>

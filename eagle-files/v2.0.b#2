@@ -111,7 +111,16 @@
 <wire x1="0" y1="78.74" x2="0" y2="0" width="0" layer="20"/>
 <text x="2.286" y="12.7" size="1.778" layer="22" rot="MR270">RAW</text>
 <text x="0.762" y="14.732" size="0.6096" layer="22" rot="MR90">momentary</text>
-<text x="23.114" y="14.732" size="1.27" layer="22" rot="MR270">SENSOR</text>
+<text x="23.622" y="14.224" size="1.27" layer="22" rot="MR270">1</text>
+<text x="23.622" y="11.938" size="1.27" layer="22" rot="MR270">2</text>
+<text x="23.622" y="6.858" size="1.27" layer="22" rot="MR270">4</text>
+<text x="23.622" y="4.826" size="1.27" layer="22" rot="MR270">3</text>
+<text x="19.304" y="16.002" size="1.27" layer="22" rot="MR270">SENSOR</text>
+<text x="18.288" y="8.382" size="1.27" layer="21" rot="R270">SENSOR</text>
+<text x="23.622" y="5.842" size="1.27" layer="21" rot="R90">4</text>
+<text x="23.622" y="3.556" size="1.27" layer="21" rot="R90">3</text>
+<text x="23.622" y="10.922" size="1.27" layer="21" rot="R90">2</text>
+<text x="23.622" y="13.208" size="1.27" layer="21" rot="R90">1</text>
 <text x="5.08" y="10.414" size="1.27" layer="21">+</text>
 <text x="6.096" y="10.414" size="1.27" layer="22" rot="MR0">+</text>
 <text x="16.002" y="4.572" size="1.27" layer="22" rot="MR0">variable</text>
@@ -126,9 +135,14 @@
 <text x="23.876" y="28.194" size="1.27" layer="22" rot="MR270">VCC</text>
 <text x="23.876" y="24.13" size="1.27" layer="22" rot="MR270">GND</text>
 <text x="23.876" y="18.288" size="1.27" layer="22" rot="MR270">6</text>
+<text x="3.302" y="25.146" size="1.27" layer="22" rot="MR0">GND</text>
+<text x="2.032" y="21.336" size="1.27" layer="22" rot="MR0">9</text>
+<text x="5.842" y="26.416" size="0.8128" layer="22" rot="MR270">speaker</text>
 <text x="8.9662" y="48.2854" size="0.8128" layer="21">.1uF</text>
 <text x="13.462" y="39.116" size="0.8128" layer="21" rot="R270">openlog</text>
 <text x="10.9982" y="48.8442" size="1.778" layer="22" rot="MR90">ThermaLocoLogger</text>
+<text x="13.97" y="69.85" size="0.8128" layer="22" rot="MR90">v1.4</text>
+<text x="3.81" y="74.93" size="0.8128" layer="22" rot="MR180">12-16-11</text>
 <text x="1.27" y="77.47" size="0.254" layer="22" rot="MR90">djb</text>
 <polygon width="0.254" layer="22">
 <vertex x="8.4328" y="39.9034"/>
@@ -486,44 +500,30 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="-1.27" y="2.54" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.27" y="1.27" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
-<package name="1X04-1MM-RA">
-<wire x1="-1.5" y1="-4.6" x2="1.5" y2="-4.6" width="0.254" layer="21"/>
-<wire x1="-3" y1="-2" x2="-3" y2="-0.35" width="0.254" layer="21"/>
-<wire x1="2.25" y1="-0.35" x2="3" y2="-0.35" width="0.254" layer="21"/>
-<wire x1="3" y1="-0.35" x2="3" y2="-2" width="0.254" layer="21"/>
-<wire x1="-3" y1="-0.35" x2="-2.25" y2="-0.35" width="0.254" layer="21"/>
-<circle x="-2.5" y="0.3" radius="0.1414" width="0.4" layer="21"/>
-<smd name="NC2" x="-2.8" y="-3.675" dx="1.2" dy="2" layer="1"/>
-<smd name="NC1" x="2.8" y="-3.675" dx="1.2" dy="2" layer="1"/>
-<smd name="1" x="-1.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<smd name="2" x="-0.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<smd name="3" x="0.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<smd name="4" x="1.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<text x="-1.73" y="1.73" size="0.4064" layer="25" rot="R180">&gt;NAME</text>
-<text x="3.46" y="1.73" size="0.4064" layer="27" rot="R180">&gt;VALUE</text>
-</package>
-</packages>
-</library>
-<library name="SparkFun-Sensors">
-<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
-In this library you'll find sensors- accelerometers, gyros, compasses, magnetometers, light sensors, imagers, temp sensors, etc.&lt;br&gt;&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
-&lt;br&gt;&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; CC v3.0 Share-Alike You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="TO-92">
-<description>&lt;b&gt;TO 92&lt;/b&gt;</description>
-<wire x1="-2.0946" y1="-1.651" x2="-0.7863" y2="2.5485" width="0.2032" layer="21" curve="-111.098957" cap="flat"/>
-<wire x1="0.7863" y1="2.5484" x2="2.0945" y2="-1.651" width="0.2032" layer="21" curve="-111.09954" cap="flat"/>
-<wire x1="-2.0945" y1="-1.651" x2="2.0945" y2="-1.651" width="0.2032" layer="21"/>
-<wire x1="-2.6549" y1="-0.254" x2="-2.2537" y2="-0.254" width="0.2032" layer="21"/>
-<wire x1="-0.2863" y1="-0.254" x2="0.2863" y2="-0.254" width="0.2032" layer="21"/>
-<wire x1="2.2537" y1="-0.254" x2="2.6549" y2="-0.254" width="0.2032" layer="21"/>
-<pad name="3" x="1.27" y="0" drill="0.8128" diameter="1.8796"/>
-<pad name="2" x="0" y="1.905" drill="0.8128" diameter="1.8796"/>
-<pad name="1" x="-1.27" y="0" drill="0.8128" diameter="1.8796"/>
-<text x="3.175" y="0.635" size="0.4064" layer="25" ratio="10">&gt;NAME</text>
-<text x="3.175" y="-1.27" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
+<package name="SCREWTERMINAL-3.5MM-4_LOCK">
+<wire x1="-2.3" y1="3.4" x2="12.8" y2="3.4" width="0.2032" layer="21"/>
+<wire x1="12.8" y1="3.4" x2="12.8" y2="-2.8" width="0.2032" layer="21"/>
+<wire x1="12.8" y1="-2.8" x2="12.8" y2="-3.6" width="0.2032" layer="21"/>
+<wire x1="12.8" y1="-3.6" x2="-2.3" y2="-3.6" width="0.2032" layer="21"/>
+<wire x1="-2.3" y1="-3.6" x2="-2.3" y2="-2.8" width="0.2032" layer="21"/>
+<wire x1="-2.3" y1="-2.8" x2="-2.3" y2="3.4" width="0.2032" layer="21"/>
+<wire x1="12.8" y1="-2.8" x2="-2.3" y2="-2.8" width="0.2032" layer="21"/>
+<wire x1="-2.3" y1="-1.35" x2="-2.7" y2="-1.35" width="0.2032" layer="51"/>
+<wire x1="-2.7" y1="-1.35" x2="-2.7" y2="-2.35" width="0.2032" layer="51"/>
+<wire x1="-2.7" y1="-2.35" x2="-2.3" y2="-2.35" width="0.2032" layer="51"/>
+<wire x1="12.8" y1="3.15" x2="13.2" y2="3.15" width="0.2032" layer="51"/>
+<wire x1="13.2" y1="3.15" x2="13.2" y2="2.15" width="0.2032" layer="51"/>
+<wire x1="13.2" y1="2.15" x2="12.8" y2="2.15" width="0.2032" layer="51"/>
+<circle x="0" y="0" radius="0.425" width="0.001" layer="51"/>
+<circle x="3.5" y="0" radius="0.425" width="0.001" layer="51"/>
+<circle x="7" y="0" radius="0.425" width="0.001" layer="51"/>
+<circle x="10.5" y="0" radius="0.425" width="0.001" layer="51"/>
+<pad name="1" x="-0.1778" y="0" drill="1.2" diameter="2.032" shape="square"/>
+<pad name="2" x="3.6778" y="0" drill="1.2" diameter="2.032"/>
+<pad name="3" x="6.8222" y="0" drill="1.2" diameter="2.032"/>
+<pad name="4" x="10.6778" y="0" drill="1.2" diameter="2.032"/>
+<text x="-1.27" y="2.54" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.27" y="1.27" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 </library>
@@ -714,8 +714,8 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="OPENLOG" library="SparkFun" package="1X06_LOCK" value="OPENLOG" x="16.002" y="29.718" smashed="yes" rot="R90"/>
-<element name="PML" library="SparkFun" package="1X12" value="Pro-Dig" x="2.286" y="46.228" smashed="yes" rot="R90"/>
-<element name="PMR" library="SparkFun" package="1X12" value="Pro-Ana" x="17.526" y="74.168" smashed="yes" rot="R270"/>
+<element name="PML" library="SparkFun" package="1X12" value="M12PTH" x="2.286" y="46.228" smashed="yes" rot="R90"/>
+<element name="PMR" library="SparkFun" package="1X12" value="M12PTH" x="17.526" y="74.168" smashed="yes" rot="R270"/>
 <element name="JP5" library="SparkFun" package="1X02" value="A4A5" x="14.986" y="62.738" smashed="yes" rot="R90"/>
 <element name="R1" library="SparkFun" package="AXIAL-0.4" value="2.76k" x="9.906" y="66.548" smashed="yes" rot="R90">
 <attribute name="VALUE" x="10.287" y="64.262" size="0.8128" layer="21" font="vector" ratio="15" rot="R90"/>
@@ -731,11 +731,16 @@ design rules under a new name.</description>
 <element name="R3" library="SparkFun" package="AXIAL-0.4" value="10k" x="9.906" y="57.15" smashed="yes" rot="R180">
 <attribute name="VALUE" x="12.192" y="57.531" size="0.8128" layer="21" font="vector" ratio="15" rot="R180"/>
 </element>
-<element name="PMLB" library="SparkFun" package="1X12" value="Side" x="22.098" y="71.628" smashed="yes" rot="R270"/>
+<element name="PMLB" library="SparkFun" package="1X12" value="M12PTH" x="22.098" y="71.628" smashed="yes" rot="R270"/>
 <element name="JP6" library="SparkFun" package="STAND-OFF-TIGHT" value="STAND-OFFTIGHT" x="2.7686" y="3.2512"/>
 <element name="JP7" library="SparkFun" package="STAND-OFF-TIGHT" value="STAND-OFFTIGHT" x="21.4122" y="76.0222"/>
 <element name="JP8" library="SparkFun" package="STAND-OFF-TIGHT" value="STAND-OFFTIGHT" x="11.684" y="9.398" rot="R90"/>
+<element name="R4" library="SparkFun" package="AXIAL-0.4" value="100" x="9.906" y="54.102" smashed="yes">
+<attribute name="VALUE" x="7.62" y="53.721" size="0.8128" layer="21" font="vector" ratio="15"/>
+</element>
+<element name="SEN1" library="SparkFun" package="JST-2-PTH" value="34" x="20.32" y="5.08" smashed="yes" rot="MR90"/>
 <element name="C3" library="SparkFun" package="CAP-PTH-5MM" value=".1u" x="9.906" y="48.006" smashed="yes" rot="R180"/>
+<element name="JP10" library="SparkFun" package="JST-2-PTH" value="SPK" x="4.064" y="23.876" smashed="yes" rot="R90"/>
 <element name="C1" library="SparkFun" package="CAP-PTH-SMALL" value=".1uF" x="11.176" y="46.482" smashed="yes" rot="R180"/>
 <element name="JP4" library="SparkFun-Connectors" package="SCREWTERMINAL-3.5MM-3_LOCK.007S" value="" x="1.27" y="-5.08"/>
 <element name="JP9" library="SparkFun-Connectors" package="SCREWTERMINAL-3.5MM-3_LOCK.007S" value="" x="1.27" y="-12.7"/>
@@ -743,8 +748,7 @@ design rules under a new name.</description>
 <element name="JP12" library="SparkFun-Connectors" package="SCREWTERMINAL-3.5MM-2_LOCK" value="M023.5MM_LOCK" x="1.27" y="-27.94"/>
 <element name="JP13" library="SparkFun-Connectors" package="SCREWTERMINAL-3.5MM-2_LOCK" value="M023.5MM_LOCK" x="1.27" y="-35.56"/>
 <element name="JP14" library="SparkFun-Connectors" package="SCREWTERMINAL-3.5MM-2_LOCK" value="M023.5MM_LOCK" x="1.27" y="-43.18"/>
-<element name="MLX90614" library="SparkFun-Connectors" package="1X04-1MM-RA" value="" x="19.05" y="11.43" rot="R90"/>
-<element name="U$1" library="SparkFun-Sensors" package="TO-92" value="TEMPERATURE-SENSOR" x="1.27" y="-50.8"/>
+<element name="IR" library="SparkFun-Connectors" package="SCREWTERMINAL-3.5MM-4_LOCK" value="IR" x="1.27" y="-50.8"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -758,9 +762,11 @@ design rules under a new name.</description>
 <contactref element="PMR" pad="2"/>
 <contactref element="PMLB" pad="4"/>
 <contactref element="PML" pad="9"/>
+<contactref element="SEN1" pad="2"/>
 <contactref element="C3" pad="2"/>
+<contactref element="JP10" pad="2"/>
 <contactref element="C1" pad="2"/>
-<contactref element="MLX90614" pad="4"/>
+<contactref element="IR" pad="4"/>
 <wire x1="22.098" y1="64.008" x2="17.526" y2="71.628" width="0" layer="19" extent="1-1"/>
 <wire x1="14.986" y1="57.15" x2="22.098" y2="64.008" width="0" layer="19" extent="1-1"/>
 <wire x1="7.406" y1="48.006" x2="14.986" y2="57.15" width="0" layer="19" extent="1-1"/>
@@ -769,10 +775,12 @@ design rules under a new name.</description>
 <wire x1="16.002" y1="29.718" x2="16.002" y2="39.878" width="0" layer="19" extent="1-1"/>
 <wire x1="21.59" y1="22.55" x2="16.002" y2="29.718" width="0" layer="19" extent="1-1"/>
 <wire x1="12.446" y1="20.574" x2="21.59" y2="22.55" width="0" layer="19" extent="1-1"/>
-<wire x1="19.05" y1="12.93" x2="21.59" y2="22.55" width="0" layer="19" extent="1-1"/>
-<wire x1="11.628" y1="2.794" x2="19.05" y2="12.93" width="0" layer="19" extent="1-1"/>
-<wire x1="4.064" y1="8.906" x2="11.628" y2="2.794" width="0" layer="19" extent="1-1"/>
+<wire x1="4.064" y1="24.876" x2="12.446" y2="20.574" width="0" layer="19" extent="1-1"/>
+<wire x1="4.064" y1="8.906" x2="12.446" y2="20.574" width="0" layer="19" extent="1-1"/>
+<wire x1="11.628" y1="2.794" x2="4.064" y2="8.906" width="0" layer="19" extent="1-1"/>
+<wire x1="20.32" y1="6.08" x2="11.628" y2="2.794" width="0" layer="19" extent="1-1"/>
 <wire x1="2.286" y1="66.548" x2="14.986" y2="57.15" width="0" layer="19" extent="1-1"/>
+<wire x1="11.9478" y1="-50.8" x2="11.628" y2="2.794" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC">
 <contactref element="JP1" pad="2"/>
@@ -792,19 +800,19 @@ design rules under a new name.</description>
 <contactref element="U1" pad="1"/>
 <contactref element="JP5" pad="2"/>
 <contactref element="R1" pad="P$1"/>
-<contactref element="MLX90614" pad="1"/>
+<contactref element="IR" pad="1"/>
 <wire x1="9.906" y1="61.468" x2="14.986" y2="65.278" width="0" layer="19" extent="1-1"/>
 <wire x1="14.986" y1="23.114" x2="9.906" y2="61.468" width="0" layer="19" extent="1-1"/>
-<wire x1="19.05" y1="9.93" x2="14.986" y2="23.114" width="0" layer="19" extent="1-1"/>
+<wire x1="1.0922" y1="-50.8" x2="14.986" y2="23.114" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="U1" pad="2"/>
 <contactref element="JP5" pad="1"/>
 <contactref element="R2" pad="P$1"/>
-<contactref element="MLX90614" pad="2"/>
+<contactref element="IR" pad="2"/>
 <wire x1="6.096" y1="61.468" x2="14.986" y2="62.738" width="0" layer="19" extent="1-1"/>
 <wire x1="12.446" y1="25.654" x2="6.096" y2="61.468" width="0" layer="19" extent="1-1"/>
-<wire x1="19.05" y1="10.93" x2="12.446" y2="25.654" width="0" layer="19" extent="1-1"/>
+<wire x1="4.9478" y1="-50.8" x2="12.446" y2="25.654" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="DISPLAY" pad="1"/>
@@ -863,6 +871,11 @@ design rules under a new name.</description>
 <contactref element="PMLB" pad="6"/>
 <wire x1="22.098" y1="58.928" x2="17.526" y2="64.008" width="0" layer="19" extent="1-1"/>
 </signal>
+<signal name="N$17">
+<contactref element="PML" pad="1"/>
+<contactref element="R4" pad="P$1"/>
+<wire x1="2.286" y1="46.228" x2="4.826" y2="54.102" width="0" layer="19" extent="1-1"/>
+</signal>
 <signal name="N$20">
 <contactref element="PML" pad="8"/>
 </signal>
@@ -882,9 +895,10 @@ design rules under a new name.</description>
 <contactref element="PMR" pad="4"/>
 <contactref element="PMLB" pad="5"/>
 <contactref element="DISPLAY" pad="3"/>
+<contactref element="SEN1" pad="1"/>
 <contactref element="C3" pad="1"/>
 <contactref element="C1" pad="1"/>
-<contactref element="MLX90614" pad="3"/>
+<contactref element="IR" pad="3"/>
 <wire x1="22.098" y1="61.468" x2="17.526" y2="66.548" width="0" layer="19" extent="1-1"/>
 <wire x1="9.906" y1="71.628" x2="17.526" y2="66.548" width="0" layer="19" extent="1-1"/>
 <wire x1="6.096" y1="71.628" x2="9.906" y2="71.628" width="0" layer="19" extent="1-1"/>
@@ -895,7 +909,13 @@ design rules under a new name.</description>
 <wire x1="9.906" y1="23.114" x2="21.59" y2="26.2278" width="0" layer="19" extent="1-1"/>
 <wire x1="4.064" y1="16.018" x2="9.906" y2="23.114" width="0" layer="19" extent="1-1"/>
 <wire x1="7.9502" y1="2.794" x2="4.064" y2="16.018" width="0" layer="19" extent="1-1"/>
-<wire x1="19.05" y1="11.93" x2="7.9502" y2="2.794" width="0" layer="19" extent="1-1"/>
+<wire x1="20.32" y1="4.08" x2="7.9502" y2="2.794" width="0" layer="19" extent="1-1"/>
+<wire x1="8.0922" y1="-50.8" x2="7.9502" y2="2.794" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$1">
+<contactref element="R4" pad="P$2"/>
+<contactref element="JP10" pad="1"/>
+<wire x1="4.064" y1="22.876" x2="14.986" y2="54.102" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
