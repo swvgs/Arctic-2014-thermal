@@ -4168,6 +4168,10 @@ We've spent an enormous amount of time creating and checking these footprints an
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="5V" width="0.6096" drill="0">
+</class>
+<class number="2" name="GND" width="0.6096" drill="0">
+</class>
 </classes>
 <parts>
 <part name="FRAME1" library="SparkFun" deviceset="FRAME-LETTER" device=""/>
@@ -4208,6 +4212,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="PACE-LED" library="SparkFun-Connectors" deviceset="M02" device="3.5MM_LOCK" value=""/>
 <part name="R8" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
 <part name="DS18B20-CON" library="SparkFun-Connectors" deviceset="M03" device="SCREW_LOCK" value="CON"/>
+<part name="RESET" library="SparkFun-Connectors" deviceset="M02" device="3.5MM_LOCK" value=""/>
+<part name="R13" library="SparkFun-Resistors" deviceset="10KOHM1/10W1%(0603)" device="0603" value="10K"/>
 </parts>
 <sheets>
 <sheet>
@@ -4236,6 +4242,16 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="2.54" y="175.26" size="1.778" layer="91">TOGGEL: start/stop data collection
 MOMENTARY: Place mark
 TOGGEL2: time/distance data collection method</text>
+<text x="157.48" y="109.22" size="1.27" layer="97">TOGGLE</text>
+<text x="157.48" y="99.06" size="1.27" layer="97">TOGGLE2</text>
+<text x="157.48" y="101.6" size="1.27" layer="97">MOMENTARY</text>
+<text x="157.48" y="96.52" size="1.27" layer="97">PACE-LED</text>
+<text x="157.48" y="104.14" size="1.27" layer="97">TOGGLE2-LED</text>
+<text x="157.48" y="106.68" size="1.27" layer="97">PWRLED</text>
+<text x="157.48" y="111.76" size="1.27" layer="97">TOGGLE-LED</text>
+<text x="157.48" y="114.3" size="1.27" layer="97">DS18B20</text>
+<text x="185.42" y="81.28" size="1.27" layer="97">SDA</text>
+<text x="185.42" y="78.74" size="1.27" layer="97">SCL</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -4277,11 +4293,13 @@ TOGGEL2: time/distance data collection method</text>
 <instance part="PACE-LED" gate="G$1" x="81.28" y="167.64" rot="R270"/>
 <instance part="R8" gate="G$1" x="83.82" y="147.32" rot="R90"/>
 <instance part="DS18B20-CON" gate="G$1" x="160.02" y="180.34" rot="R270"/>
+<instance part="RESET" gate="G$1" x="243.84" y="137.16" rot="R180"/>
+<instance part="R13" gate="G$1" x="218.44" y="119.38" rot="R180"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="GND" class="0">
+<net name="GND" class="2">
 <segment>
 <pinref part="OPENLOG1" gate="G$1" pin="1"/>
 <wire x1="190.5" y1="154.94" x2="190.5" y2="152.4" width="0.1524" layer="91"/>
@@ -4294,15 +4312,16 @@ TOGGEL2: time/distance data collection method</text>
 <pinref part="PRO_MINI" gate="G$1" pin="GND@2"/>
 <wire x1="236.22" y1="121.92" x2="233.68" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="121.92" x2="208.28" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="233.68" y1="121.92" x2="233.68" y2="104.14" width="0.1524" layer="91"/>
 <junction x="233.68" y="121.92"/>
+<wire x1="233.68" y1="121.92" x2="233.68" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="104.14" x2="233.68" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="55.88" x2="233.68" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="149.86" x2="233.68" y2="144.78" width="0.1524" layer="91"/>
 <junction x="200.66" y="152.4"/>
 <pinref part="MLX1" gate="G$1" pin="4"/>
 <wire x1="233.68" y1="144.78" x2="233.68" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="233.68" y1="139.7" x2="233.68" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="139.7" x2="233.68" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="137.16" x2="233.68" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="48.26" x2="187.96" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="50.8" x2="172.72" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="50.8" x2="172.72" y2="60.96" width="0.1524" layer="91"/>
@@ -4352,6 +4371,9 @@ TOGGEL2: time/distance data collection method</text>
 <pinref part="DS18B20-CON" gate="G$1" pin="1"/>
 <wire x1="157.48" y1="167.64" x2="157.48" y2="172.72" width="0.1524" layer="91"/>
 <junction x="175.26" y="162.56"/>
+<pinref part="RESET" gate="G$1" pin="1"/>
+<wire x1="236.22" y1="137.16" x2="233.68" y2="137.16" width="0.1524" layer="91"/>
+<junction x="233.68" y="137.16"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -4410,7 +4432,7 @@ TOGGEL2: time/distance data collection method</text>
 <wire x1="215.9" y1="68.58" x2="210.82" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="5V" class="0">
+<net name="5V" class="1">
 <segment>
 <pinref part="PRO_MINI" gate="G$1" pin="VCC"/>
 <wire x1="208.28" y1="116.84" x2="231.14" y2="116.84" width="0.1524" layer="91"/>
@@ -4425,7 +4447,8 @@ TOGGEL2: time/distance data collection method</text>
 <wire x1="231.14" y1="147.32" x2="231.14" y2="142.24" width="0.1524" layer="91"/>
 <junction x="231.14" y="116.84"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="231.14" y1="142.24" x2="231.14" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="142.24" x2="231.14" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="119.38" x2="231.14" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="60.96" x2="231.14" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="226.06" y1="68.58" x2="231.14" y2="68.58" width="0.1524" layer="91"/>
@@ -4473,6 +4496,9 @@ TOGGEL2: time/distance data collection method</text>
 <pinref part="DS18B20-CON" gate="G$1" pin="3"/>
 <wire x1="162.56" y1="170.18" x2="162.56" y2="172.72" width="0.1524" layer="91"/>
 <junction x="172.72" y="157.48"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="223.52" y1="119.38" x2="231.14" y2="119.38" width="0.1524" layer="91"/>
+<junction x="231.14" y="119.38"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -4608,6 +4634,18 @@ TOGGEL2: time/distance data collection method</text>
 <pinref part="PRO_MINI" gate="G$1" pin="*9"/>
 <wire x1="81.28" y1="160.02" x2="81.28" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="96.52" x2="185.42" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="PRO_MINI" gate="G$1" pin="RST@2"/>
+<pinref part="R13" gate="G$1" pin="2"/>
+<wire x1="213.36" y1="119.38" x2="210.82" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="RESET" gate="G$1" pin="2"/>
+<wire x1="210.82" y1="119.38" x2="208.28" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="134.62" x2="210.82" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="134.62" x2="210.82" y2="119.38" width="0.1524" layer="91"/>
+<junction x="210.82" y="119.38"/>
 </segment>
 </net>
 </nets>
