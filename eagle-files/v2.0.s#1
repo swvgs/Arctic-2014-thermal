@@ -3630,7 +3630,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="R12" library="SparkFun-Resistors" deviceset="10KOHM1/10W1%(0603)" device="0603" value="10K"/>
 <part name="WHL-PWR" library="SparkFun-Connectors" deviceset="M02" device="3.5MM_LOCK" value=""/>
 <part name="WHL-DATA" library="SparkFun-Connectors" deviceset="M02" device="3.5MM_LOCK" value=""/>
-<part name="PACE-LED" library="SparkFun-Connectors" deviceset="M02" device="3.5MM_LOCK" value=""/>
+<part name="MOMENTARY-LED" library="SparkFun-Connectors" deviceset="M02" device="3.5MM_LOCK" value=""/>
 <part name="R8" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
 <part name="DS18B20-CON" library="SparkFun-Connectors" deviceset="M03" device="SCREW_LOCK" value="CON"/>
 <part name="RESET" library="SparkFun-Connectors" deviceset="M02" device="3.5MM_LOCK" value=""/>
@@ -3655,7 +3655,7 @@ TOGGEL2: time/distance data collection method</text>
 <text x="106.68" y="109.22" size="1.27" layer="97">TOGGLE</text>
 <text x="106.68" y="99.06" size="1.27" layer="97">TOGGLE2</text>
 <text x="106.68" y="101.6" size="1.27" layer="97">MOMENTARY</text>
-<text x="106.68" y="96.52" size="1.27" layer="97">PACE-LED</text>
+<text x="106.68" y="96.52" size="1.27" layer="97">Momentary-LED</text>
 <text x="106.68" y="104.14" size="1.27" layer="97">TOGGLE2-LED</text>
 <text x="106.68" y="106.68" size="1.27" layer="97">PWRLED</text>
 <text x="106.68" y="111.76" size="1.27" layer="97">TOGGLE-LED</text>
@@ -3699,7 +3699,7 @@ TOGGEL2: time/distance data collection method</text>
 <instance part="R12" gate="G$1" x="48.26" y="88.9" rot="R270"/>
 <instance part="WHL-PWR" gate="G$1" x="195.58" y="96.52" rot="R180"/>
 <instance part="WHL-DATA" gate="G$1" x="195.58" y="83.82" rot="R180"/>
-<instance part="PACE-LED" gate="G$1" x="30.48" y="167.64" rot="R270"/>
+<instance part="MOMENTARY-LED" gate="G$1" x="30.48" y="167.64" rot="R270"/>
 <instance part="R8" gate="G$1" x="33.02" y="147.32" rot="R90"/>
 <instance part="DS18B20-CON" gate="G$1" x="109.22" y="180.34" rot="R270"/>
 <instance part="RESET" gate="G$1" x="193.04" y="137.16" rot="R180"/>
@@ -4002,14 +4002,14 @@ TOGGEL2: time/distance data collection method</text>
 </net>
 <net name="N$16" class="0">
 <segment>
-<pinref part="PACE-LED" gate="G$1" pin="2"/>
+<pinref part="MOMENTARY-LED" gate="G$1" pin="2"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="33.02" y1="152.4" x2="33.02" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$17" class="0">
 <segment>
-<pinref part="PACE-LED" gate="G$1" pin="1"/>
+<pinref part="MOMENTARY-LED" gate="G$1" pin="1"/>
 <pinref part="PRO_MINI" gate="G$1" pin="*9"/>
 <wire x1="30.48" y1="160.02" x2="30.48" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="96.52" x2="134.62" y2="96.52" width="0.1524" layer="91"/>
