@@ -4168,6 +4168,10 @@ We've spent an enormous amount of time creating and checking these footprints an
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="5V" width="0.6096" drill="0">
+</class>
+<class number="2" name="GND" width="0.6096" drill="0">
+</class>
 </classes>
 <parts>
 <part name="FRAME1" library="SparkFun" deviceset="FRAME-LETTER" device=""/>
@@ -4291,7 +4295,7 @@ TOGGEL2: time/distance data collection method</text>
 <busses>
 </busses>
 <nets>
-<net name="GND" class="0">
+<net name="GND" class="2">
 <segment>
 <pinref part="OPENLOG1" gate="G$1" pin="1"/>
 <wire x1="190.5" y1="154.94" x2="190.5" y2="152.4" width="0.1524" layer="91"/>
@@ -4420,7 +4424,7 @@ TOGGEL2: time/distance data collection method</text>
 <wire x1="215.9" y1="68.58" x2="210.82" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="5V" class="0">
+<net name="5V" class="1">
 <segment>
 <pinref part="PRO_MINI" gate="G$1" pin="VCC"/>
 <wire x1="208.28" y1="116.84" x2="231.14" y2="116.84" width="0.1524" layer="91"/>

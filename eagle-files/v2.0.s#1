@@ -3799,12 +3799,12 @@ TOGGEL2: time/distance data collection method</text>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="OPENLOG1" gate="G$1" pin="3"/>
-<wire x1="144.78" y1="154.94" x2="144.78" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="149.86" x2="129.54" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="PRO_MINI" gate="G$1" pin="TXO"/>
 <wire x1="129.54" y1="149.86" x2="129.54" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="124.46" x2="134.62" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="OPENLOG1" gate="G$1" pin="2"/>
+<wire x1="129.54" y1="149.86" x2="142.24" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="149.86" x2="142.24" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V" class="1">

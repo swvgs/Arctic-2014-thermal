@@ -4236,6 +4236,16 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="2.54" y="175.26" size="1.778" layer="91">TOGGEL: start/stop data collection
 MOMENTARY: Place mark
 TOGGEL2: time/distance data collection method</text>
+<text x="157.48" y="109.22" size="1.27" layer="97">TOGGLE</text>
+<text x="157.48" y="99.06" size="1.27" layer="97">TOGGLE2</text>
+<text x="157.48" y="101.6" size="1.27" layer="97">MOMENTARY</text>
+<text x="157.48" y="96.52" size="1.27" layer="97">PACE-LED</text>
+<text x="157.48" y="104.14" size="1.27" layer="97">TOGGLE2-LED</text>
+<text x="157.48" y="106.68" size="1.27" layer="97">PWRLED</text>
+<text x="157.48" y="111.76" size="1.27" layer="97">TOGGLE-LED</text>
+<text x="157.48" y="114.3" size="1.27" layer="97">DS18B20</text>
+<text x="185.42" y="81.28" size="1.27" layer="97">SDA</text>
+<text x="185.42" y="78.74" size="1.27" layer="97">SCL</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>

@@ -3807,45 +3807,6 @@ TOGGEL2: time/distance data collection method</text>
 <wire x1="129.54" y1="124.46" x2="134.62" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="MLX1" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="48.26" x2="144.78" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="50.8" x2="157.48" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="PWM/SDA"/>
-<wire x1="157.48" y1="50.8" x2="157.48" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="60.96" x2="157.48" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="63.5" x2="154.94" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="63.5" x2="162.56" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="63.5" x2="162.56" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="81.28" x2="132.08" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="PRO_MINI" gate="G$1" pin="A5"/>
-<wire x1="132.08" y1="81.28" x2="132.08" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="88.9" x2="134.62" y2="88.9" width="0.1524" layer="91"/>
-<junction x="157.48" y="63.5"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="165.1" y1="60.96" x2="157.48" y2="60.96" width="0.1524" layer="91"/>
-<junction x="157.48" y="60.96"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="MLX1" gate="G$1" pin="2"/>
-<wire x1="142.24" y1="48.26" x2="142.24" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="53.34" x2="160.02" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="SCL/VZ"/>
-<wire x1="160.02" y1="53.34" x2="160.02" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="68.58" x2="154.94" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="68.58" x2="160.02" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="78.74" x2="129.54" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="PRO_MINI" gate="G$1" pin="A4"/>
-<wire x1="129.54" y1="78.74" x2="129.54" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="91.44" x2="134.62" y2="91.44" width="0.1524" layer="91"/>
-<junction x="160.02" y="68.58"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="165.1" y1="68.58" x2="160.02" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="5V" class="1">
 <segment>
 <pinref part="PRO_MINI" gate="G$1" pin="VCC"/>
@@ -4071,6 +4032,45 @@ TOGGEL2: time/distance data collection method</text>
 <pinref part="A0" gate="G$1" pin="3"/>
 <pinref part="PRO_MINI" gate="G$1" pin="A0"/>
 <wire x1="187.96" y1="106.68" x2="157.48" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="MLX1" gate="G$1" pin="2"/>
+<wire x1="142.24" y1="48.26" x2="142.24" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="PWM/SDA"/>
+<wire x1="157.48" y1="60.96" x2="157.48" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="63.5" x2="154.94" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="63.5" x2="162.56" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="63.5" x2="162.56" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="81.28" x2="132.08" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="PRO_MINI" gate="G$1" pin="A5"/>
+<wire x1="132.08" y1="81.28" x2="132.08" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="88.9" x2="134.62" y2="88.9" width="0.1524" layer="91"/>
+<junction x="157.48" y="63.5"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="165.1" y1="60.96" x2="157.48" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="53.34" x2="157.48" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="53.34" x2="157.48" y2="60.96" width="0.1524" layer="91"/>
+<junction x="157.48" y="60.96"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<wire x1="144.78" y1="50.8" x2="160.02" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="MLX1" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="48.26" x2="144.78" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="SCL/VZ"/>
+<wire x1="160.02" y1="68.58" x2="154.94" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="68.58" x2="160.02" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="78.74" x2="129.54" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="PRO_MINI" gate="G$1" pin="A4"/>
+<wire x1="129.54" y1="78.74" x2="129.54" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="91.44" x2="134.62" y2="91.44" width="0.1524" layer="91"/>
+<junction x="160.02" y="68.58"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="165.1" y1="68.58" x2="160.02" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="50.8" x2="160.02" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
