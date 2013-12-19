@@ -10,3 +10,5 @@ http://www.futureelectronics.com/en/technologies/semiconductors/analog/sensors/t
 
 IR Sensor: 10deg FOV
 http://www.futureelectronics.com/en/technologies/semiconductors/analog/sensors/temperature/Pages/4099248-MLX90614ESF-ACF-000-TU.aspx?IM=0
+
+The v2.0 files would not upload to OSHpark.com correctly (kept showing an old version) so I copied them to another directory, renamed them, uploaded, and it all worked fine. Not sure if it was a caching problem on their end, or something funny on mine. 
