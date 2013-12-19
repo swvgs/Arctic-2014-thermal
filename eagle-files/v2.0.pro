@@ -2,24 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : /Users/dblake/Documents/Arduino/Arctic-2014-thermal/eagle-files/v2.0.brd
 
-Start at      : 20:53:05 (12/15/13)
-End at        : 20:53:11 (12/15/13)
-Elapsed time  : 00:00:06
+Start at      : 20:37:45 (12/18/13)
+End at        : 20:37:46 (12/18/13)
+Elapsed time  : 00:00:01
 
 Signals       :    22   RoutingGrid: 8 mil  Layers: 2
-Connections   :    63   predefined:  10 ( 0 Vias )
+Connections   :    63   predefined:  63 ( 5 Vias )
 
-Router memory :   770048
+Router memory :   322660
 
-Passname          :    Busses     Route Optimize1 Optimize2 Optimize3 Optimize4
+Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:00  00:00:02  00:00:01  00:00:01  00:00:01  00:00:01
-Number of Ripups  :         0         0         0         0         0         0
-max. Level        :         0         0         0         0         0         0
-max. Total        :         0         0         0         0         0         0
+Time per pass     :  00:00:00  00:00:01  00:00:00  00:00:00  00:00:00
+Number of Ripups  :         0         0         0         0         0
+max. Level        :         0         0         0         0         0
+max. Total        :         0         0         0         0         0
 
-Routed            :         1        53        53        53        53        53
-Vias              :         0        35        11         6         5         5
-Resolution        :    17.5 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
+Routed            :         0         0         0         0         0
+Vias              :         0         0         0         0         0
+Resolution        :   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
 
-Final             : 98.4% finished. Polygons may have fallen apart.
+Final             : 100.0% finished

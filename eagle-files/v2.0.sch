@@ -3630,7 +3630,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="DS18B20-CON" library="SparkFun-Connectors" deviceset="M03" device="SCREW_LOCK" value="CON"/>
 <part name="RESET" library="SparkFun-Connectors" deviceset="M02" device="3.5MM_LOCK" value=""/>
 <part name="R13" library="SparkFun-Resistors" deviceset="10KOHM1/10W1%(0603)" device="0603" value="10K"/>
-<part name="TMP36" library="SparkFun-Connectors" deviceset="M03" device="SCREW_LOCK"/>
+<part name="TMP36" library="SparkFun-Connectors" deviceset="M03" device="SCREW_LOCK" value="TMP36"/>
 </parts>
 <sheets>
 <sheet>
@@ -4066,15 +4066,6 @@ TOGGEL2: time/distance data collection method</text>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="101,1,15.24,5.08,JP13,1,,,,"/>
-<approved hash="101,1,15.24,7.62,JP13,2,,,,"/>
-<approved hash="101,1,30.48,30.48,R99,2,,,,"/>
-<approved hash="101,1,20.32,30.48,R99,1,,,,"/>
-<approved hash="101,1,33.02,20.32,R98,2,,,,"/>
-<approved hash="101,1,22.86,20.32,R98,1,,,,"/>
-<approved hash="113,1,12.0227,19.2447,SCREW,,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>

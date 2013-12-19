@@ -3635,7 +3635,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="DS18B20-CON" library="SparkFun-Connectors" deviceset="M03" device="SCREW_LOCK" value="CON"/>
 <part name="RESET" library="SparkFun-Connectors" deviceset="M02" device="3.5MM_LOCK" value=""/>
 <part name="R13" library="SparkFun-Resistors" deviceset="10KOHM1/10W1%(0603)" device="0603" value="10K"/>
-<part name="A0" library="SparkFun-Connectors" deviceset="M03" device="SCREW_LOCK"/>
+<part name="TMP36" library="SparkFun-Connectors" deviceset="M03" device="SCREW_LOCK"/>
 </parts>
 <sheets>
 <sheet>
@@ -3704,7 +3704,7 @@ TOGGEL2: time/distance data collection method</text>
 <instance part="DS18B20-CON" gate="G$1" x="109.22" y="180.34" rot="R270"/>
 <instance part="RESET" gate="G$1" x="193.04" y="137.16" rot="R180"/>
 <instance part="R13" gate="G$1" x="167.64" y="119.38" rot="R180"/>
-<instance part="A0" gate="G$1" x="195.58" y="109.22" rot="R180"/>
+<instance part="TMP36" gate="G$1" x="195.58" y="109.22" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -3785,7 +3785,7 @@ TOGGEL2: time/distance data collection method</text>
 <pinref part="RESET" gate="G$1" pin="1"/>
 <wire x1="185.42" y1="137.16" x2="182.88" y2="137.16" width="0.1524" layer="91"/>
 <junction x="182.88" y="137.16"/>
-<pinref part="A0" gate="G$1" pin="2"/>
+<pinref part="TMP36" gate="G$1" pin="2"/>
 <wire x1="187.96" y1="109.22" x2="182.88" y2="109.22" width="0.1524" layer="91"/>
 <junction x="182.88" y="109.22"/>
 </segment>
@@ -3875,7 +3875,7 @@ TOGGEL2: time/distance data collection method</text>
 <pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="119.38" x2="180.34" y2="119.38" width="0.1524" layer="91"/>
 <junction x="180.34" y="119.38"/>
-<pinref part="A0" gate="G$1" pin="1"/>
+<pinref part="TMP36" gate="G$1" pin="1"/>
 <wire x1="187.96" y1="111.76" x2="180.34" y2="111.76" width="0.1524" layer="91"/>
 <junction x="180.34" y="111.76"/>
 </segment>
@@ -4029,7 +4029,7 @@ TOGGEL2: time/distance data collection method</text>
 </net>
 <net name="N$20" class="0">
 <segment>
-<pinref part="A0" gate="G$1" pin="3"/>
+<pinref part="TMP36" gate="G$1" pin="3"/>
 <pinref part="PRO_MINI" gate="G$1" pin="A0"/>
 <wire x1="187.96" y1="106.68" x2="157.48" y2="106.68" width="0.1524" layer="91"/>
 </segment>
