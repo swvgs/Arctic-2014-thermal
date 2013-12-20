@@ -3637,7 +3637,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <sheets>
 <sheet>
 <plain>
-<text x="154.94" y="25.4" size="3.81" layer="95">Whistler</text>
+<text x="175.26" y="17.78" size="3.81" layer="95">Whistler</text>
 <text x="208.28" y="121.92" size="1.778" layer="91" rot="R180">GND</text>
 <text x="208.28" y="124.46" size="1.778" layer="91" rot="R180">RAW</text>
 <text x="139.7" y="160.02" size="1.778" layer="91" rot="R90">GND</text>
