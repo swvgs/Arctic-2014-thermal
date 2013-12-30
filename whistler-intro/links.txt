@@ -1,0 +1,37 @@
+Pro Mini:
+https://www.sparkfun.com/products/11113
+
+FTDI:
+https://www.sparkfun.com/products/9716
+
+Hall
+https://www.sparkfun.com/products/9312
+
+TMP36
+https://www.sparkfun.com/products/10988
+
+MLX90614-ACC (BAA)
+http://www.futureelectronics.com/en/technologies/semiconductors/analog/sensors/temperature/Pages/7012690-MLX90614ESF-ACC-000-TU.aspx?IM=0
+(https://www.sparkfun.com/products/9570)
+
+DS18B20
+https://www.sparkfun.com/products/245
+
+OpenLog
+https://www.sparkfun.com/products/9530
+
+Whistler board
+
+
+Screw Terminals
+https://www.sparkfun.com/products/8432
+
+JST
+https://www.sparkfun.com/products/10359
+
+toggle
+https://www.sparkfun.com/products/11975
+
+Arcade Button
+https://www.sparkfun.com/products/9336
+
