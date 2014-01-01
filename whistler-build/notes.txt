@@ -1,0 +1,15 @@
+Black wire wrap: 7
+Blue Wirewrap: the rest
+
+Hall (3pin)		Data Black, 2 blue
+TMP36 (3pin)	Data Black, 2 blue
+DS18B20 (3pin) 	Data Black, 2 blue
+MLX90614 (4pin) 	Pin 1 Black, 3 blue
+
+2xHall
+2xTMP36
+0xDS18b20
+3xMLX90614
+
+7 black
+17 blue blue
