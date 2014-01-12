@@ -36,20 +36,24 @@ void setup() {
 void loop() {
 
   unsigned long currentMillis = millis();
+
+  Serial.print("Time: ");
+  Serial.print(currentMillis);
+
   float celcius = mlx9600();
 
-  Serial.print("IR: ");
+  Serial.print(",  IR: ");
   Serial.print(celcius);
 
 
   temps = 0;
-  for (int i=0;i<60;i++) {
+  for (int i=0;i<100;i++) {
     voltage = getVoltage(temperaturePin);
     degreesC = (voltage - 0.5) * 100.0;  
     temps += degreesC;
   }
-  avgtemp = temps/60;
-  Serial.print(", CON: ");
+  avgtemp = temps/100;
+  Serial.print(",  CON: ");
   Serial.println(avgtemp);
 
 
@@ -76,6 +80,7 @@ void loop() {
 float getVoltage(int pin) {
   return (analogRead(pin) * 5.0 / 1024.0);
 }
+
 
 
 
