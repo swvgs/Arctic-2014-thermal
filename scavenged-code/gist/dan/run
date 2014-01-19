@@ -1,0 +1,3 @@
+make
+./queue > something.tex
+open something.tex

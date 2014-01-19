@@ -3631,13 +3631,11 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="RESET" library="SparkFun-Connectors" deviceset="M02" device="3.5MM_LOCK" value=""/>
 <part name="R13" library="SparkFun-Resistors" deviceset="10KOHM1/10W1%(0603)" device="0603" value="10K"/>
 <part name="TMP36" library="SparkFun-Connectors" deviceset="M03" device="SCREW_LOCK" value="TMP36"/>
-<part name="R4" library="SparkFun-Resistors" deviceset="10KOHM1/10W1%(0603)" device="0603" value="10K"/>
-<part name="R9" library="SparkFun-Resistors" deviceset="10KOHM1/10W1%(0603)" device="0603" value="10K"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="154.94" y="25.4" size="3.81" layer="95">Whistler</text>
+<text x="175.26" y="17.78" size="3.81" layer="95">Whistler</text>
 <text x="208.28" y="121.92" size="1.778" layer="91" rot="R180">GND</text>
 <text x="208.28" y="124.46" size="1.778" layer="91" rot="R180">RAW</text>
 <text x="139.7" y="160.02" size="1.778" layer="91" rot="R90">GND</text>
@@ -3690,15 +3688,13 @@ TOGGEL2: time/distance data collection method</text>
 <instance part="R11" gate="G$1" x="63.5" y="88.9" rot="R270"/>
 <instance part="R12" gate="G$1" x="48.26" y="88.9" rot="R270"/>
 <instance part="VCC/GND" gate="G$1" x="195.58" y="96.52" rot="R180"/>
-<instance part="DIG10/11" gate="G$1" x="210.82" y="83.82" rot="R180"/>
+<instance part="DIG10/11" gate="G$1" x="195.58" y="83.82" rot="R180"/>
 <instance part="MOMENTARY-LED" gate="G$1" x="30.48" y="167.64" rot="R270"/>
 <instance part="R8" gate="G$1" x="33.02" y="147.32" rot="R90"/>
 <instance part="DS18B20-CON" gate="G$1" x="109.22" y="180.34" rot="R270"/>
 <instance part="RESET" gate="G$1" x="193.04" y="137.16" rot="R180"/>
 <instance part="R13" gate="G$1" x="167.64" y="119.38" rot="R180"/>
 <instance part="TMP36" gate="G$1" x="195.58" y="109.22" rot="R180"/>
-<instance part="R4" gate="G$1" x="190.5" y="76.2" rot="R180"/>
-<instance part="R9" gate="G$1" x="190.5" y="66.04" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -3808,11 +3804,9 @@ TOGGEL2: time/distance data collection method</text>
 <pinref part="OPENLOG1" gate="G$1" pin="4"/>
 <wire x1="180.34" y1="116.84" x2="180.34" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="111.76" x2="180.34" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="96.52" x2="180.34" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="76.2" x2="180.34" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="96.52" x2="180.34" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="73.66" x2="180.34" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="68.58" x2="180.34" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="66.04" x2="180.34" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="68.58" x2="180.34" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="60.96" x2="180.34" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="154.94" x2="147.32" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="147.32" x2="180.34" y2="147.32" width="0.1524" layer="91"/>
@@ -3874,12 +3868,6 @@ TOGGEL2: time/distance data collection method</text>
 <pinref part="TMP36" gate="G$1" pin="1"/>
 <wire x1="187.96" y1="111.76" x2="180.34" y2="111.76" width="0.1524" layer="91"/>
 <junction x="180.34" y="111.76"/>
-<pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="185.42" y1="66.04" x2="180.34" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="185.42" y1="76.2" x2="180.34" y2="76.2" width="0.1524" layer="91"/>
-<junction x="180.34" y="76.2"/>
-<junction x="180.34" y="66.04"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -3987,29 +3975,19 @@ TOGGEL2: time/distance data collection method</text>
 <net name="N$3" class="0">
 <segment>
 <pinref part="DIG10/11" gate="G$1" pin="1"/>
-<wire x1="175.26" y1="83.82" x2="198.12" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="83.82" x2="187.96" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="PRO_MINI" gate="G$1" pin="*11"/>
-<wire x1="198.12" y1="83.82" x2="203.2" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="99.06" x2="175.26" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="175.26" y1="99.06" x2="175.26" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="195.58" y1="76.2" x2="198.12" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="76.2" x2="198.12" y2="83.82" width="0.1524" layer="91"/>
-<junction x="198.12" y="83.82"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
 <pinref part="DIG10/11" gate="G$1" pin="2"/>
-<wire x1="203.2" y1="81.28" x2="200.66" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="81.28" x2="172.72" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="PRO_MINI" gate="G$1" pin="*10"/>
-<wire x1="200.66" y1="81.28" x2="172.72" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="96.52" x2="172.72" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="96.52" x2="172.72" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="195.58" y1="66.04" x2="200.66" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="200.66" y1="66.04" x2="200.66" y2="81.28" width="0.1524" layer="91"/>
-<junction x="200.66" y="81.28"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -4083,16 +4061,6 @@ TOGGEL2: time/distance data collection method</text>
 <pinref part="PRO_MINI" gate="G$1" pin="A5"/>
 <wire x1="132.08" y1="78.74" x2="132.08" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="88.9" x2="134.62" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="OPENLOG1" gate="G$1" pin="3"/>
-<wire x1="144.78" y1="154.94" x2="144.78" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="137.16" x2="127" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="PRO_MINI" gate="G$1" pin="RXI"/>
-<wire x1="127" y1="137.16" x2="127" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="127" y1="121.92" x2="134.62" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
