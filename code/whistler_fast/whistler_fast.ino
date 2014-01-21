@@ -1,4 +1,5 @@
 #include <i2cmaster.h>
+#include <digitalWriteFast.h>
 
 // Pin configurations
 //const int DS18B20 = 2;        // DS18B20
@@ -52,58 +53,58 @@ void setup() {
 
   //aalog pins do not need to be set as input, there is no option to set them otherwise.
 
-  pinMode(toggleLed, OUTPUT);
-  pinMode(powerLed, OUTPUT);
-  pinMode(toggle2Led, OUTPUT);
-  pinMode(momentaryLed, OUTPUT);
+  pinModeFast(toggleLed, OUTPUT);
+  pinModeFast(powerLed, OUTPUT);
+  pinModeFast(toggle2Led, OUTPUT);
+  pinModeFast(momentaryLed, OUTPUT);
 
   // switch things on so that you know we are booting.
-  digitalWrite(toggleLed, HIGH);
-  digitalWrite(toggle2Led, HIGH);
-  digitalWrite(momentaryLed, HIGH);
+  digitalWriteFast2(toggleLed, HIGH);
+  digitalWriteFast2(toggle2Led, HIGH);
+  digitalWriteFast2(momentaryLed, HIGH);
 
-  pinMode(toggleSwitch, INPUT);
-  pinMode(momentary, INPUT);
-  pinMode(toggle2Switch, INPUT);
-  pinMode(hall, INPUT);
-  // pinMode(hall2, INPUT);
+  pinModeFast(toggleSwitch, INPUT);
+  pinModeFast(momentary, INPUT);
+  pinModeFast(toggle2Switch, INPUT);
+  pinModeFast(hall, INPUT);
+  // pinModeFast(hall2, INPUT);
 
   i2c_init(); //Initialise the i2c bus
   PORTC = (1 << PORTC4) | (1 << PORTC5); //enable pullups
-  Serial.println("Whistler V2.0 (01-19-14)");
+  Serial.println("Whistler V2.0 (01--14)");
 
   /**************************************************************
    * Put in code for toggle to so that you switch from taking
    * data based on the hall sensors, or just time. Not sure what
    * this would look like, but that would go here.
-   * digitalRead(toggle2Switch);
+   * digitalReadFast2(toggle2Switch);
   /**************************************************************/
 
   delay(3000); //1 second delay to make sure everything is ready and happy.
 
-  toggle2SwitchState = digitalRead(toggle2Switch);
+  toggle2SwitchState = digitalReadFast2(toggle2Switch);
 
   if (toggle2SwitchState == HIGH) {
     dataMode = 1;
     for (int i=0;i<10;i++) {
-      digitalWrite(toggle2Led, HIGH);
+      digitalWriteFast2(toggle2Led, HIGH);
       delay(150);
-      digitalWrite(toggle2Led, LOW);
+      digitalWriteFast2(toggle2Led, LOW);
       delay(150);
     }
     interval = 1000 * 1/50 - 1; //set the data recording to 50Hz; ~20ms delay
-    digitalWrite(toggle2Led, HIGH);
+    digitalWriteFast2(toggle2Led, HIGH);
   } 
   else {
     dataMode = 0;
     interval = 1000 * 1/50 -1;
-    digitalWrite(toggle2Led, LOW);
+    digitalWriteFast2(toggle2Led, LOW);
   }
 
   // switch things off so that you know booting is done and we are ready
-  digitalWrite(toggleLed, LOW);
-  digitalWrite(momentaryLed, LOW);
-  digitalWrite(powerLed, HIGH);
+  digitalWriteFast2(toggleLed, LOW);
+  digitalWriteFast2(momentaryLed, LOW);
+  digitalWriteFast2(powerLed, HIGH);
 
 }
 
@@ -127,46 +128,4 @@ void loop() {
 float getTMP(int pin) {
   return (analogRead(pin) * 5.0 / 1024.0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
