@@ -1,4 +1,4 @@
-void dataByDistance() {
+void dataByDistance(float interval) {
   currentMillis = millis();
 
   toggleSwitchState = digitalRead(toggleSwitch);

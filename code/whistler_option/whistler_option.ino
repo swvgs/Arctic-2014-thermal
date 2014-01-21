@@ -32,7 +32,7 @@ int dataMode = 0;         // used to set if the data is taken time or distance b
 //This is to keep the delay between readings the same (frequancy constant)
 unsigned long currentMillis = 0;
 unsigned long previousMillis = 0;
-long interval = 59;
+float interval = 0;
 
 size_t ptr = 0;       // ptr in the array for dumping
 #define arrSize 30         //size of the array
@@ -82,22 +82,26 @@ void setup() {
   delay(3000); //1 second delay to make sure everything is ready and happy.
 
   toggle2SwitchState = digitalRead(toggle2Switch);
+
   if (toggle2SwitchState == HIGH) {
     dataMode = 1;
     for (int i=0;i<10;i++) {
       digitalWrite(toggle2Led, HIGH);
-      delay(60);
+      delay(150);
       digitalWrite(toggle2Led, LOW);
+      delay(150);
     }
+    interval = 1000 * 1/50 - 1; //set the data recording to 50Hz; ~20ms delay
+    digitalWrite(toggle2Led, HIGH);
   } 
   else {
     dataMode = 0;
+    interval = 1000 * 1/50 -1;
+    digitalWrite(toggle2Led, LOW);
   }
-
 
   // switch things off so that you know booting is done and we are ready
   digitalWrite(toggleLed, LOW);
-  digitalWrite(toggle2Led, LOW);
   digitalWrite(momentaryLed, LOW);
   digitalWrite(powerLed, HIGH);
 
@@ -108,10 +112,10 @@ void loop() {
   //  Serial.print(collectState);
 
   if (dataMode == LOW) {
-    dataByDistance();
+    dataByDistance(interval);
   } 
   else {
-    dataByTime();
+    dataByTime(interval);
   }
 
 
@@ -123,6 +127,7 @@ void loop() {
 float getTMP(int pin) {
   return (analogRead(pin) * 5.0 / 1024.0);
 }
+
 
 
 
