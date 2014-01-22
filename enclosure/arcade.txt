@@ -1,0 +1,7 @@
+Size:
+
+bezel: 32mm, 1.26in
+height: 65mm, 2.56in
+mounting hole: 28mm, 1.125in
+
+have 32mm and 25mm hole saws
