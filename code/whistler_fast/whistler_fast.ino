@@ -1,5 +1,7 @@
 #include <i2cmaster.h>
+#include <digitalWriteFast.h>
 
+/*
 // Pin configurations
 //const int DS18B20 = 2;        // DS18B20
 const int toggleLed = 3;      // Toggle LED
@@ -12,7 +14,7 @@ const int momentaryLed = 9;   // Momentary Switch LED
 const int hall = 10;          // Hall Switch 1
 const int hall2 = 11;         // Hall Switch 2
 const int ambTemp = A0;       // Analog 0, TMP36
-
+/**/
 
 
 // Variable definitions
@@ -43,30 +45,27 @@ float dataAmbient[arrSize];
 float dataIR[arrSize];
 
 
-
-
-
 void setup() {
 
-  Serial.begin(9600);
+  Serial.begin(57600);
 
   //aalog pins do not need to be set as input, there is no option to set them otherwise.
 
-  pinMode(toggleLed, OUTPUT);
-  pinMode(powerLed, OUTPUT);
-  pinMode(toggle2Led, OUTPUT);
-  pinMode(momentaryLed, OUTPUT);
+  pinModeFast(3, OUTPUT);
+  pinModeFast(5, OUTPUT);
+  pinModeFast(6, OUTPUT);
+  pinModeFast(9, OUTPUT);
 
   // switch things on so that you know we are booting.
-  digitalWrite(toggleLed, HIGH);
-  digitalWrite(toggle2Led, HIGH);
-  digitalWrite(momentaryLed, HIGH);
+  digitalWriteFast(3, HIGH);
+  digitalWriteFast(6, HIGH);
+  digitalWriteFast(9, HIGH);
 
-  pinMode(toggleSwitch, INPUT);
-  pinMode(momentary, INPUT);
-  pinMode(toggle2Switch, INPUT);
-  pinMode(hall, INPUT);
-  // pinMode(hall2, INPUT);
+  pinModeFast(4, INPUT);
+  pinModeFast(7, INPUT);
+  pinModeFast(8, INPUT);
+  pinModeFast(10, INPUT);
+  // pinModeFast(11, INPUT);
 
   i2c_init(); //Initialise the i2c bus
   PORTC = (1 << PORTC4) | (1 << PORTC5); //enable pullups
@@ -81,29 +80,29 @@ void setup() {
 
   delay(3000); //1 second delay to make sure everything is ready and happy.
 
-  toggle2SwitchState = digitalRead(toggle2Switch);
+  toggle2SwitchState = digitalReadFast(8);
 
   if (toggle2SwitchState == HIGH) {
     dataMode = 1;
     for (int i=0;i<10;i++) {
-      digitalWrite(toggle2Led, HIGH);
+      digitalWriteFast(6, HIGH);
       delay(150);
-      digitalWrite(toggle2Led, LOW);
+      digitalWriteFast(6, LOW);
       delay(150);
     }
-    interval = 1000 * 1/50 - 1; //set the data recording to 50Hz; ~20ms delay
-    digitalWrite(toggle2Led, HIGH);
+    interval = 1; //set the data recording to 50Hz; ~20ms delay
+    digitalWriteFast(6, HIGH);
   } 
   else {
     dataMode = 0;
-    interval = 1000 * 1/50 -1;
-    digitalWrite(toggle2Led, LOW);
+    interval = 1;
+    digitalWriteFast(6, LOW);
   }
 
   // switch things off so that you know booting is done and we are ready
-  digitalWrite(toggleLed, LOW);
-  digitalWrite(momentaryLed, LOW);
-  digitalWrite(powerLed, HIGH);
+  digitalWriteFast(3, LOW);
+  digitalWriteFast(9, LOW);
+  digitalWriteFast(5, HIGH);
 
 }
 

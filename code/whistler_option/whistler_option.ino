@@ -48,7 +48,7 @@ float dataIR[arrSize];
 
 void setup() {
 
-  Serial.begin(9600);
+  Serial.begin(57600);
 
   //aalog pins do not need to be set as input, there is no option to set them otherwise.
 
@@ -91,12 +91,12 @@ void setup() {
       digitalWrite(toggle2Led, LOW);
       delay(150);
     }
-    interval = 1000 * 1/50 - 1; //set the data recording to 50Hz; ~20ms delay
+    interval = 4;//1000 * 1/50 - 1; //set the data recording to 50Hz; ~20ms delay
     digitalWrite(toggle2Led, HIGH);
   } 
   else {
     dataMode = 0;
-    interval = 1000 * 1/50 -1;
+    interval = 4;//1000 * 1/50 -1;
     digitalWrite(toggle2Led, LOW);
   }
 

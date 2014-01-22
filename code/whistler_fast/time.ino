@@ -1,26 +1,26 @@
 void dataByTime(float interval) {
   currentMillis = millis();
 
-  toggleSwitchState = digitalRead(toggleSwitch);
+  toggleSwitchState = digitalReadFast(4);
   if (toggleSwitchState == LOW) {
-    digitalWrite(toggleLed, LOW); 
+    digitalWriteFast(6, LOW); 
     if (collectState == LOW) {
       Serial.println("Data collection stopped.");
       collectState = HIGH;
     }
   }   
   else  {
-    digitalWrite(toggleLed, HIGH);
+    digitalWriteFast(6, HIGH);
     if (currentMillis - previousMillis > interval) {
       previousMillis = currentMillis;
       //read ir, read amb, read momentary, read hall
       celcius = mlx9600();
-      voltage = getTMP(ambTemp);
+      voltage = getTMP(A0);
       degreesC = (voltage - 0.5) * 100.0;
-      momentaryState = digitalRead(momentary);
+      momentaryState = digitalReadFast(7);
 
 /*      if (readMomentary == 0 && momentaryState == HIGH) {
-        digitalWrite(momentaryLed, HIGH); 
+        digitalWriteFast(momentaryLed, HIGH); 
         readMomentary = 1;
       }/**/
 
@@ -29,11 +29,11 @@ void dataByTime(float interval) {
         Serial.print("*,");
         momentaryState = 0;
 //        readMomentary = 0;
-        digitalWrite(momentaryLed, HIGH);
+        digitalWriteFast(9, HIGH);
       } 
       else {
         Serial.print(",");
-        digitalWrite(momentaryLed, LOW);
+        digitalWriteFast(9, LOW);
       }
       Serial.print(currentMillis);
       Serial.print(",");
