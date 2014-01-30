@@ -1,3 +1,2 @@
 toggle switch:
-SPDT: 7/32 drill bit
-DPDT: 1/4 drill bit
+1/4 drill bit
