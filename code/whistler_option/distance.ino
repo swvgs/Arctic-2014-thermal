@@ -42,7 +42,7 @@ void dataByDistance(float interval) {
           digitalWrite(momentaryLed, LOW);
         } 
         else {
-          Serial.print(",");
+          Serial.print(";");
         }
 
         size_t idx = 0;
