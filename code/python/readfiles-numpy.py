@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import glob #import global vars for the computer so we can get the directory list
-
+import numpy
 #import sys
 #import time
 #print sys.version
@@ -53,12 +53,23 @@ for fnames in filenames: #loop through all the files found above
 			avg_time = getMedian(time2) #find the median time (overwrites the above line)
 			avg_amb = sum(amb2)/float(len(amb2)) #average the ambient temperatures
 			avg_ir = sum(ir2)/float(len(ir2)) #average the IR temperatures
+
+			amb2_np = numpy.array(amb2)
+			amb2_avg = numpy.mean(amb2)
+			amb2_std = numpy.std(amb2_np)
+			print 'ambient:',amb2_avg,'+/-',amb2_std
+			ir2_np = numpy.array(ir2)
+			ir2_avg = numpy.mean(ir2)
+			ir2_std = numpy.std(ir2_np)
+			print 'IR temp:',ir2_avg,'+/-',ir2_std
+
+
 #			print time2 #print everything out 
 			print avg_time
 #			print amb2
-			print avg_amb
+#			print avg_amb
 #			print ir2
-			print avg_ir
+#			print avg_ir
 			print '------------------' #print a line so we can see the breaks easier
 	print "\nFile length is %d lines." %file_length #tell us how many lines are in the file
 	file_length = 0 #reset the variable for the next file.
