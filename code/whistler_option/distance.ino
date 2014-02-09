@@ -36,7 +36,7 @@ void dataByDistance(float interval) {
 
       if (hallState != hallStateOld) {
         if (momentaryState == HIGH) {
-          Serial.print("*,");
+          Serial.print("*;");
           momentaryState = 0;
           readMomentary = 0;
           digitalWrite(momentaryLed, LOW);
@@ -46,25 +46,25 @@ void dataByDistance(float interval) {
         }
 
         size_t idx = 0;
-        Serial.print("[");
+        Serial.print("");
         for (; idx < arrSize; idx++) {
           Serial.print(dataTime[idx]);
           if (idx != arrSize-1) 
             Serial.print(",");
         }
-        Serial.print("],[");
+        Serial.print(";");
         for(idx = 0; idx < arrSize; idx++) {
           Serial.print(dataAmbient[idx]);
           if (idx != arrSize-1) 
             Serial.print(",");
         }
-        Serial.print("],[");
+        Serial.print(";");
         for(idx = 0; idx < arrSize; idx++) {
           Serial.print(dataIR[idx]);
           if (idx != arrSize-1) 
             Serial.print(",");
         }
-        Serial.println("]");
+        Serial.println("");
         hallStateOld = hallState;
       }
       collectState = LOW;

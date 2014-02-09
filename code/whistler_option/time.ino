@@ -26,19 +26,19 @@ void dataByTime(float interval) {
 
 
       if (momentaryState == HIGH) {
-        Serial.print("*,");
+        Serial.print("*;");
         momentaryState = 0;
 //        readMomentary = 0;
         digitalWrite(momentaryLed, HIGH);
       } 
       else {
-        Serial.print(",");
+        Serial.print(";");
         digitalWrite(momentaryLed, LOW);
       }
       Serial.print(currentMillis);
-      Serial.print(",");
+      Serial.print(";");
       Serial.print(degreesC);
-      Serial.print(",");
+      Serial.print(";");
       Serial.println(celcius);
       collectState = LOW;
     }

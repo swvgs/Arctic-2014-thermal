@@ -70,8 +70,7 @@ void setup() {
 
   i2c_init(); //Initialise the i2c bus
   PORTC = (1 << PORTC4) | (1 << PORTC5); //enable pullups
-  Serial.println("Whistler V2.0 (01-19-14)");
-
+  Serial.println("Whistler V2.0 (02-08-14)");
   /**************************************************************
    * Put in code for toggle to so that you switch from taking
    * data based on the hall sensors, or just time. Not sure what
