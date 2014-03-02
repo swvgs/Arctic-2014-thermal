@@ -3,6 +3,7 @@ import glob #import global vars for the computer so we can get the directory lis
 
 #import sys
 #import time
+#import numarray
 #print sys.version
 #time.sleep(5.5)
 
@@ -22,6 +23,16 @@ def getMedian(numericValues):
 		lower = theValues[len(theValues)/2-1]
 		upper = theValues[len(theValues)/2]
 		return (float(lower + upper)) / 2
+def getStdev(valueArray,avgVal):
+	counter = 0 #initilize the counter
+	varArr = [] #make an empty array to save values to
+	for num in valueArray:
+		varArr.append ( (valueArray[counter] - avgVal)**2) #add the new element to the array 
+		counter += 1 #incriment the counter
+	innards = sum(varArr)/len(varArr)
+	stdev = innards**0.5
+	return stdev
+
 
 
 for fnames in filenames: #loop through all the files found above
@@ -52,13 +63,17 @@ for fnames in filenames: #loop through all the files found above
 			avg_time = sum(time2)/float(len(time2)) #average the time
 			avg_time = getMedian(time2) #find the median time (overwrites the above line)
 			avg_amb = sum(amb2)/float(len(amb2)) #average the ambient temperatures
+			stdevamb = getStdev(amb2,avg_amb)
 			avg_ir = sum(ir2)/float(len(ir2)) #average the IR temperatures
+			stdevir = getStdev(ir2,avg_ir)
 #			print time2 #print everything out 
 			print avg_time
 #			print amb2
 			print avg_amb
+			print stdevamb
 #			print ir2
 			print avg_ir
+			print stdevir
 			print '------------------' #print a line so we can see the breaks easier
 	print "\nFile length is %d lines." %file_length #tell us how many lines are in the file
 	file_length = 0 #reset the variable for the next file.
