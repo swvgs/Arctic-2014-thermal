@@ -38,7 +38,8 @@ def getStdev(valueArray,avgVal):
 for fnames in filenames: #loop through all the files found above
 	print fnames #print the current file name
 	read_file = open(fnames) #open and read the data from the current file
-	outfile = open(fnames+'.csv','w')
+	line_count = 1
+	outfile = open(fnames+'-'+line_count+'.csv','w')
 	outfile.write('Mark,'+' Time,'+' AmbTemp,'+' AmbStdv,'+ ' IR Temp,'+' IR Stdv\n') 
 	for line in read_file: #loop through all the lines in the file
 		file_length += 1 #incriment our number of lines counter
@@ -47,8 +48,11 @@ for fnames in filenames: #loop through all the files found above
 		#	print file_length,':',line
 #		print line
 		if 'Data collection stopped.' in line: #check to see if we stopped collecting data or not
-			print 'End of data stream.' #print a happy message letting us know we found the end of the file
-			break #exit the loop
+			outfile.close()
+			line_count += 1
+			outfile = open(fnames+'-'line_count+'.csv','w')
+#			print 'End of data stream.' #print a happy message letting us know we found the end of the file			
+#			break #exit the loop
 	       	a=line.split(';') #split the line at all the semicolons
 #		print a
 		if file_length > 0: #this will let us disreguard the array header if needed
