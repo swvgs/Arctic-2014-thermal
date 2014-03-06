@@ -34,27 +34,26 @@ def getStdev(valueArray,avgVal):
 	return stdev
 
 
-
+asdf = raw_input('start distance: ')
 for fnames in filenames: #loop through all the files found above
 	print fnames #print the current file name
 	read_file = open(fnames) #open and read the data from the current file
 	line_count = 1
-	outfile = open(fnames+'-'+line_count+'.csv','w')
-	outfile.write('Mark,'+' Time,'+' AmbTemp,'+' AmbStdv,'+ ' IR Temp,'+' IR Stdv\n') 
-	for line in read_file: #loop through all the lines in the file
+	mark_count = 0
+	str_line = str(line_count)
+	outfile = open(fnames+'_'+str_line+'.csv','w')
+	outfile.write('Mark, Time, AmbTemp, AmbStdv, IR Temp, IR Stdv\n')
+ 	for line in read_file: #loop through all the lines in the file
 		file_length += 1 #incriment our number of lines counter
 		print file_length #print the file length
-		#if file_length > 1:
-		#	print file_length,':',line
-#		print line
 		if 'Data collection stopped.' in line: #check to see if we stopped collecting data or not
 			outfile.close()
 			line_count += 1
-			outfile = open(fnames+'-'line_count+'.csv','w')
-#			print 'End of data stream.' #print a happy message letting us know we found the end of the file			
-#			break #exit the loop
+			str_line = str(line_count)
+			outfile = open(fnames+'_'+str_line+'.csv','w')
+			outfile.write('Mark, Time, AmbTemp, AmbStdv, IR Temp, IR Stdv\n')
+			continue
 	       	a=line.split(';') #split the line at all the semicolons
-#		print a
 		if file_length > 0: #this will let us disreguard the array header if needed
 			time = a[1].split(',') #split the time into an array
 			time2 = [float(col) for col in time] #convert time from strings to floats
@@ -64,8 +63,13 @@ for fnames in filenames: #loop through all the files found above
 			ir = tempir.split(',') #break the IR temperatures into an array
 			ir2 = [float(col) for col in ir] #convert the IR temperatures from strings to floats
 		mark = a[0] #put the marks into its own little special variable
-		outfile.write(mark) #print the mark
+#		outfile.write(mark) #print the mark
+		if mark == '*' and mark_count > 3:
+			mout = str(mark_count)
+			outfile.write(mout)
+			mark_count = 0
 		if file_length >0:#check to skip the header again if needed (probably can combine this loop)
+			mark_count += 1
 			avg_time = sum(time2)/float(len(time2)) #average the time
 			avg_time = getMedian(time2) #find the median time (overwrites the above line)
 			avg_amb = sum(amb2)/float(len(amb2)) #average the ambient temperatures
@@ -73,23 +77,14 @@ for fnames in filenames: #loop through all the files found above
 			avg_ir = sum(ir2)/float(len(ir2)) #average the IR temperatures
 			stdevir = getStdev(ir2,avg_ir)
 
-#			print avg_time
-#			print avg_amb
-#			print stdevamb
-#			print avg_ir
-#			print stdevir
-
-
 			str_avgtime = str(avg_time)
 			str_avgamb = str(avg_amb)
 			str_stdevamb = str(stdevamb)
 			str_avgir = str(avg_ir)
 			str_stdevir = str(stdevir)
-
 			
 			outfile.write(','+str_avgtime+','+str_avgamb+','+str_stdevamb+','+str_avgir+','+str_stdevir+'\n')
 
-#			print '------------------' #print a line so we can see the breaks easier
 	outfile.close()
 	print "\nFile length is %d lines." %file_length #tell us how many lines are in the file
 	file_length = 0 #reset the variable for the next file.
