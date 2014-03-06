@@ -3,8 +3,6 @@ import glob #import global vars for the computer so we can get the directory lis
 
 #import sys
 #import time
-#import numarray
-from numpy import *
 #print sys.version
 #time.sleep(5.5)
 
@@ -35,9 +33,11 @@ def getStdev(valueArray,avgVal):
 	return stdev
 
 
-mark_distance = raw_input('Mark Spacing: ')
+#mark_distance = raw_input('Mark Spacing: ')
+mark_distance = 10
 export = []
 export_mark = []
+#arr_export = []
 
 for fnames in filenames: #loop through all the files found above
 	print fnames #print the current file name
@@ -80,7 +80,7 @@ for fnames in filenames: #loop through all the files found above
 			avg_ir = sum(ir2)/float(len(ir2)) #average the IR temperatures
 			stdevir = getStdev(ir2,avg_ir)
 
-			export.append ([avg_time,avg_amb,stdevamb,avg_ir,stdevir])
+			export.append ([mark,avg_time,avg_amb,stdevamb,avg_ir,stdevir])
 
 			str_avgtime = str(avg_time)
 			str_avgamb = str(avg_amb)
@@ -90,11 +90,33 @@ for fnames in filenames: #loop through all the files found above
 			
 			outfile.write(','+str_avgtime+','+str_avgamb+','+str_stdevamb+','+str_avgir+','+str_stdevir+'\n')
 
+#	arr_export.append(export)
+
 	outfile.close()
 	print export_mark
-	print export[5]
+	print export[0]
+	print export[4]
 	print "\nFile length is %d lines." %file_length #tell us how many lines are in the file
 	file_length = 0 #reset the variable for the next file.
 
+	print len(export) 
+	loop_count = 0 #where we are in the loop
+	mark_count = 0 #what mark we are looking at
+	loop_pos = 1   #how many times we have gone through the thing
 
+	for num in export:
+		loop_count +=1
+		mark = num[0]
+		time = num[1]
+		amb  = num[2]
+		ambs = num[3]
+		ir   = num[4]
+		irst = num[5]
+		if loop_count <= export_mark[0]:
+			continue
+		var = mark_count*mark_distance+(mark_distance/export_mark[mark_count]*loop_pos)
+		print var
+		loop_pos += 1
+		mark_count += 1
+	export = []
 
