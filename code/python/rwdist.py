@@ -49,7 +49,7 @@ for fnames in filenames: #loop through all the files found above
 	outfile.write('Mark, Time, AmbTemp, AmbStdv, IR Temp, IR Stdv\n')
  	for line in read_file: #loop through all the lines in the file
 		file_length += 1 #incriment our number of lines counter
-		print file_length #print the file length
+#		print file_length #print the file length
 		if 'Data collection stopped.' in line: #check to see if we stopped collecting data or not
 			outfile.close()
 			line_count += 1
@@ -100,23 +100,43 @@ for fnames in filenames: #loop through all the files found above
 	file_length = 0 #reset the variable for the next file.
 
 	print len(export) 
-	loop_count = 0 #where we are in the loop
-	mark_count = 0 #what mark we are looking at
-	loop_pos = 1   #how many times we have gone through the thing
 
-	for num in export:
-		loop_count +=1
-		mark = num[0]
-		time = num[1]
-		amb  = num[2]
-		ambs = num[3]
-		ir   = num[4]
-		irst = num[5]
-		if loop_count <= export_mark[0]:
-			continue
-		var = mark_count*mark_distance+(mark_distance/export_mark[mark_count]*loop_pos)
-		print var
-		loop_pos += 1
-		mark_count += 1
+#	j = 0
+#	i = 0
+#	imax = len(export)
+#	for num_lines in export_mark:
+#		for markers in range(num_lines):
+#			for length in markers:
+#				i +=1
+#				if (i >= imax):
+#					break
+
+
+
+#	loop_count = 0 #where we are in the loop
+#	mark_count = 0 #what mark we are looking at
+#	loop_pos = 1   #how many times we have gone through the thing
+
+#	for num in export:
+#		loop_count +=1
+#		mark = num[0]
+#		time = num[1]
+#		amb  = num[2]
+#		ambs = num[3]
+#		ir   = num[4]
+#		irst = num[5]
+#		if loop_count <= export_mark[0]:
+#			continue
+#		if loop_pos == 1:
+#			var = 0
+#		else:
+#			var = mark_count*mark_distance+(mark_distance/export_mark[mark_count]*loop_pos)
+#		print var
+#		loop_pos += 1
+#		if mark_count == len(export_mark)-1:
+#			print "ahhh"
+#			break
+#		mark_count += 1
+
 	export = []
 
